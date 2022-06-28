@@ -66,30 +66,6 @@ header nav ul a{
     width: 100%;
 }
 
-/* #section-nav ul li a{
-    display: inline-block;
-
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-
-    background-color: black;
-
-    border-style: solid;
-    border-color: beige;
-    border-width: 2px;
-
-    padding: 10px 20px;
-    text-align: center;
-
-    width: 100%;
-}
-
-#section-nav li{
-    float: left;
-    width: 20%;
-} */
-
 hr{
     color: antiquewhite;
     height: 0px;
@@ -130,6 +106,13 @@ hr{
 
 .donde-estamos a img {
     width: 100%;
+
+    position: relative;
+
+    animation-name: movimientoMapa;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 /* ----- Fotos ----- */
@@ -149,8 +132,7 @@ hr{
 .footer {
     width: 100%;
 
-    background-color: black;
-
+    background: linear-gradient(to right, black, #804000)
 }
 
 .footer-redes {
@@ -244,6 +226,7 @@ hr{
 
     .donde-estamos{
         grid-area: donde-estamos;
+
     }
 
     /* ----- @fotos ----- */ 
@@ -271,6 +254,32 @@ hr{
         text-align: end;
     }
     
+}
+
+/* ==================== ANIMACIONES ==================== */
+
+@keyframes movimientoMapa {
+
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(0.75);
+    }
+
+    50% {
+        transform: scale(0.5);
+    }
+
+    75% {
+        transform: scale(0.75);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
 }
 
 /* --------------------------------------------------------------------------------------------------- */
